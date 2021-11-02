@@ -5,19 +5,21 @@ const lookup = {
   start: "flex-start",
   end: "flex-end",
   center: "center",
-  "space-between": "space-between",
-  "space-around": "space-around",
-  "space-evenly": "space-evenly",
 };
 
-const RowContainer = ({ sx, align = "center", bordered, gutter, children }) => (
+const ColumnContainer = ({
+  sx,
+  align = "center",
+  bordered,
+  gutter,
+  children,
+}) => (
   <Box
     sx={{
       display: "flex",
-      flexDirection: "row",
-      flexWrap: "wrap",
-      justifyContent: lookup[align],
-      alignItems: "center",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: lookup[align],
       ...(bordered && {
         borderColor: "#cdcdcd",
         borderStyle: "solid",
@@ -31,4 +33,4 @@ const RowContainer = ({ sx, align = "center", bordered, gutter, children }) => (
   </Box>
 );
 
-export default RowContainer;
+export default ColumnContainer;

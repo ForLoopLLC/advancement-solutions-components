@@ -5,8 +5,16 @@ import BannerMessage from "./BannerMessage";
 export default {
   component: BannerMessage,
   title: "Components/BannerMessage",
+  argTypes: {
+    text: {
+      control: { type: "text" },
+    },
+  },
 };
 
-export const Component = () => (
-  <BannerMessage text="This is a banner message" />
-);
+const Template = (args) => <BannerMessage {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  text: "This is a banner message",
+};
