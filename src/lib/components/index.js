@@ -5,3 +5,5 @@ export { default as Page } from "./Page";
 export { default as PageContainer } from "./PageContainer";
 export { default as PageLoadingSkeleton } from "./PageLoadingSkeleton";
 export { default as RowContainer } from "./RowContainer";
+export { default as Breadcrumb } from "./Breadcrumb";
+export { default as Breadcrumbs } from "./Breadcrumbs";

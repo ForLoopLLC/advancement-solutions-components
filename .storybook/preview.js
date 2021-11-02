@@ -3,6 +3,7 @@ import { modeTheme } from "../src/theme";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import { MemoryRouter } from "react-router";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -23,7 +24,9 @@ export const decorators = [
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Story />
+          <MemoryRouter initialEntries={["/"]}>
+            <Story />
+          </MemoryRouter>
         </ThemeProvider>
       </StyledEngineProvider>
     );
