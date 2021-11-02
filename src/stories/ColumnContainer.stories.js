@@ -1,9 +1,10 @@
 import React from "react";
-import RowContainer from "./RowContainer";
+
+import ColumnContainer from "../lib/components/ColumnContainer";
 
 export default {
-  component: RowContainer,
-  title: "Components/Containers/RowContainer",
+  component: ColumnContainer,
+  title: "Components/Containers/ColumnContainer",
   argTypes: {
     bordered: {
       control: { type: "boolean" },
@@ -12,26 +13,19 @@ export default {
       control: { type: "boolean" },
     },
     align: {
-      options: [
-        "start",
-        "end",
-        "center",
-        "space-between",
-        "space-around",
-        "space-evenly",
-      ],
+      options: ["start", "end", "center"],
       control: { type: "radio" },
     },
   },
 };
 
 const Template = (args) => (
-  <RowContainer {...args}>
+  <ColumnContainer {...args}>
     <p>One</p>
     <p>Two</p>
     <p>Three</p>
     <p>Four</p>
-  </RowContainer>
+  </ColumnContainer>
 );
 
 export const Default = Template.bind({});

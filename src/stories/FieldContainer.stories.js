@@ -1,6 +1,6 @@
 import React from "react";
-import ColumnContainer from "../ColumnContainer";
-import FieldContainer from "./FieldContainer";
+import ColumnContainer from "../lib/components/ColumnContainer";
+import FieldContainer from "../lib/components/FieldContainer";
 
 export default {
   component: FieldContainer,

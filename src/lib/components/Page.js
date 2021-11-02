@@ -1,7 +1,7 @@
 import React from "react";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
-import { BannerMessage } from "../BannerMessage/BannerMessage";
+import BannerMessage from "./BannerMessage";
 import { Box } from "@mui/system";
 
 const Page = ({ user, children, busy = false }) => {

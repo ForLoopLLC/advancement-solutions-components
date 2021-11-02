@@ -3,7 +3,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 import WarningIcon from "@mui/icons-material/Warning";
-import RowContainer from "../RowContainer";
+import RowContainer from "./RowContainer";
 
 const BannerMessage = ({ text }) => {
   const theme = useTheme();

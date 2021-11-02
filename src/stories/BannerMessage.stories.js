@@ -1,6 +1,6 @@
 import React from "react";
 
-import BannerMessage from "./BannerMessage";
+import BannerMessage from "../lib/components/BannerMessage";
 
 export default {
   component: BannerMessage,

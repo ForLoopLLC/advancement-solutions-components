@@ -1,5 +1,5 @@
 import React from "react";
-import PageLoadingSkeleton from "./PageLoadingSkeleton";
+import PageLoadingSkeleton from "../lib/components/PageLoadingSkeleton";
 
 export default {
   component: PageLoadingSkeleton,
