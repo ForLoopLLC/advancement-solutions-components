@@ -4,13 +4,14 @@ import CircularProgress from "@mui/material/CircularProgress";
 import BannerMessage from "./BannerMessage";
 import { Box } from "@mui/system";
 
-const Page = ({ user, children, busy = false }) => {
+const Page = ({ user, children, busy = false, sx }) => {
   return (
     <Box>
       {user && user.message && <BannerMessage text={user.message} />}
       <Box
         sx={{
           padding: 2,
+          ...sx,
         }}
       >
         <Backdrop
