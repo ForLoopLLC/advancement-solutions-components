@@ -47,8 +47,8 @@
     "prebump": "git push",
     "bump": "npm version prerelease --preid=beta",
     "postbump": "git push",
-    "prepackage": "yarn bump",
-    "package": "yarn bump && yarn build"
+    "prepackage": "yarn build",
+    "package": "yarn bump"
   },
   "eslintConfig": {
     "extends": [
