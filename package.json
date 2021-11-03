@@ -44,8 +44,12 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
-    "bump": "git push && npm version prerelease --preid=beta",
-    "push": "yarn bump && git push && yarn build && npm publish"
+    "prebump": "git push",
+    "bump": "npm version prerelease --preid=beta",
+    "postbump": "git push",
+    "prepackage": "yarn bump",
+    "package": "yarn bump && yarn build",
+    "postpackage": "npm publish"
   },
   "eslintConfig": {
     "extends": [
