@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/system";
 
-const PageContainer = ({ children, sx }) => {
+const PageContainer = ({ bordered = true, width, children, sx }) => {
   return (
     <Box
       sx={{
@@ -14,13 +14,17 @@ const PageContainer = ({ children, sx }) => {
     >
       <Box
         sx={{
-          maxWidth: (props) => (props.width ? `${props.width}px` : "1000px"),
+          maxWidth: width ? `${width}px` : "1000px",
           width: "100%",
         }}
       >
         <Box
           sx={{
-            border: (props) => (props.noBorder ? null : "1px solid #cdcdcd"),
+            ...(bordered && {
+              borderColor: "#cdcdcd",
+              borderStyle: "solid",
+              borderWidth: 1,
+            }),
             width: "100%",
           }}
         >

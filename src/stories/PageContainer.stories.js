@@ -4,6 +4,11 @@ import PageContainer from "../lib/components/PageContainer";
 export default {
   component: PageContainer,
   title: "Components/Page/PageContainer",
+  argTypes: {
+    bordered: {
+      control: { type: "boolean" },
+    },
+  },
 };
 
 const Template = (args) => (
@@ -16,4 +21,4 @@ const Template = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = { bordered: true };
