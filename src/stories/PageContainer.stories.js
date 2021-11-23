@@ -8,6 +8,9 @@ export default {
     bordered: {
       control: { type: "boolean" },
     },
+    fullWidth: {
+      control: { type: "boolean" },
+    },
   },
 };
 
@@ -22,3 +25,9 @@ const Template = (args) => (
 
 export const Default = Template.bind({});
 Default.args = { bordered: true };
+
+export const NoBorder = Template.bind({});
+NoBorder.args = { bordered: false };
+
+export const FullWidth = Template.bind({});
+FullWidth.args = { bordered: true, fullWidth: true };

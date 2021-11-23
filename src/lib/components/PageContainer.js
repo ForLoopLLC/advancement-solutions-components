@@ -1,7 +1,13 @@
 import React from "react";
 import { Box } from "@mui/system";
 
-const PageContainer = ({ bordered = true, width, children, sx }) => {
+const PageContainer = ({
+  bordered = true,
+  fullWidth = false,
+  width,
+  children,
+  sx,
+}) => {
   return (
     <Box
       sx={{
@@ -14,7 +20,7 @@ const PageContainer = ({ bordered = true, width, children, sx }) => {
     >
       <Box
         sx={{
-          maxWidth: width ? `${width}px` : "1000px",
+          maxWidth: fullWidth ? null : width ? `${width}px` : "1000px",
           width: "100%",
         }}
       >
