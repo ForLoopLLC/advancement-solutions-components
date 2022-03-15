@@ -26,6 +26,7 @@ const BannerMessage = ({ text }) => {
       )}
       <Typography
         variant="body1"
+        align="center"
         sx={{
           mt: 1,
           mb: 1,
