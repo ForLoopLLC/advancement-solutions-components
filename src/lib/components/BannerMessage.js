@@ -11,7 +11,7 @@ const BannerMessage = ({ text }) => {
   return (
     <RowContainer
       sx={{
-        backgroundColor: "warning.main",
+        backgroundColor: "info.main",
       }}
     >
       {!isMobile && (
